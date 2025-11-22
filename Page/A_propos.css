@@ -1,0 +1,468 @@
+/* Style dédié pour la page À propos du Knowledge Searching Club */
+:root{
+    /* garder la même palette que le site principal */
+    --ksc-primary: #4B5CF0;
+    --ksc-secondary: #7D89F9;
+    --ksc-accent: #48C6EF; /* nouvelle nuance turquoise légère */
+    --ksc-highlight: #B388FF; /* violet doux d'accent */
+    --ksc-bg:  #395eba;
+    --ksc-text: #1E1E1E;
+    --ksc-muted: #555A6E;
+    --ksc-radius: 10px;
+    --ksc-shadow: 0 10px 26px rgba(20,28,60,0.04);
+    --section-bg: #E4E8F7;
+    --card-bg: var(--section-bg);
+}
+/* Page container */
+.about-hero {
+    text-align: center;
+    margin: 28px auto 6px;
+}
+.about-hero h1 {
+    margin: 0 0 12px;
+    color: var(--ksc-primary);
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+.about-intro {
+    max-width: 880px;
+    margin: 0 auto 28px;
+    color: var(--ksc-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+/* Ligne décorative sous les titres */
+h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 6px auto 0;
+    border-radius: 3px;
+    background: linear-gradient(to right, var(--ksc-primary), var(--ksc-accent));
+}
+/* Sections layout */
+.about-section {
+    width: 100%;
+    margin: 22px 0;
+    padding: 18px;
+    border-radius: var(--ksc-radius);
+    background: transparent;
+}
+.section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    gap: 18px;
+}
+/* Missions */
+.missions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    align-items: stretch;
+}
+.mission-card {
+    background: var(--card-bg);
+    padding: 18px;
+    border-radius: 8px;
+    box-shadow: var(--ksc-shadow);
+    border: 1px solid rgba(20,28,60,0.03);
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    transition: all .3s ease;
+}
+.mission-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(20,28,60,0.10);
+}
+.mission-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    border-radius: 8px;
+    background: var(--ksc-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: background 0.3s ease;
+}
+.mission-card:hover .mission-icon {
+    background: var(--ksc-accent);
+}
+.mission-body h4 {
+    margin: 0 0 6px;
+    color: var(--ksc-primary);
+    font-size: 1.03rem;
+}
+.mission-body p {
+    margin: 0;
+    color: var(--ksc-text);
+    font-size: 0.95rem;
+}
+/* Histoire */
+.histoire {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 20px;
+    align-items: center;
+}
+.histoire .histoire-img img {
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(75, 92, 240, 0.25);
+    display: block;
+    transition: all 0.4s ease;
+}
+.histoire .histoire-img img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(75, 92, 240, 0.35);
+}
+.histoire p {
+    margin: 0;
+    color: var(--ksc-text);
+    line-height: 1.6;
+}
+/* Activités */
+.activites-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+.activite {
+    background: var(--card-bg);
+    padding: 14px;
+    border-radius: 8px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    box-shadow: var(--ksc-shadow);
+    border: 1px solid rgba(20,28,60,0.03);
+    transition: all .3s ease;
+}
+.activite:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(20,28,60,0.10);
+}
+.activite .symbole {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: var(--ksc-secondary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+.activite:hover .symbole {
+    background: var(--ksc-accent);
+}
+.activite h5 {
+    margin: 0 0 6px;
+    color: var(--ksc-primary);
+}
+.activite p {
+    margin: 0;
+    color: var(--ksc-text);
+    font-size: 0.95rem;
+}
+/* Valeurs */
+.valeurs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+.valeur-badge {
+    background: var(--ksc-primary);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: 0 6px 18px rgba(75,92,240,0.08);
+    transition: all 0.3s ease;
+}
+.valeur-badge:hover {
+    background: var(--ksc-accent);
+    transform: translateY(-3px);
+}
+/* Ligne séparatrice entre sections */
+.section-divider {
+    width: 80%;
+    height: 2px;
+    margin: 40px auto;
+    background: linear-gradient(to right, var(--ksc-primary), var(--ksc-accent));
+    border-radius: 2px;
+}
+/* CTA */
+.about-cta {
+    text-align: center;
+    padding: 18px;
+}
+.about-cta p {
+    color: var(--ksc-text);
+    margin: 0 0 12px;
+}
+.cta-btn {
+    display: inline-block;
+    background: var(--ksc-primary);
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all .25s ease;
+}
+.cta-btn:hover {
+    background: var(--ksc-secondary);
+    transform: translateY(-3px);
+}
+/* Animation d’apparition douce */
+/* ---------- Animations : implémentation centralisée ---------- */
+/* Etat initial commun : invisible et légèrement décalé en Y (ne pas utiliser visibility:hidden) */
+.fade-trigger {
+    opacity: 0;
+    transform: translateY(20px);
+    /* transition fallback si l'animation ne joue pas (reduced-motion) */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Etat visible : appliqué une seule fois par le JS */
+.fade-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Keyframes uniques pour chaque effet (pas de duplications) */
+@keyframes k-fade-up {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes k-zoom-in {
+    from { opacity: 0; transform: scale(0.92); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes k-slide-left {
+    from { opacity: 0; transform: translateX(-40px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes k-fade-bounce {
+    0%   { opacity: 0; transform: translateY(20px); }
+    60%  { opacity: 1; transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes k-fade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Effets appliqués via la combinaison .<selector>.fade-visible
+     Important : nous n'utilisons pas !important et ne changeons pas
+     la structure du HTML ou les couleurs. Les animations sont non-réversibles
+     : après apparition, l'élément reste visible (on unobserve en JS). */
+
+/* Missions : fade-up (cards) */
+.mission-card.fade-visible {
+    animation: k-fade-up 1.0s cubic-bezier(.22,.9,.31,1) both;
+}
+
+/* Histoire : zoom-in sur l'image seulement */
+.histoire-img.fade-visible img {
+    animation: k-zoom-in 1.1s cubic-bezier(.22,.9,.31,1) both;
+}
+
+/* Si le conteneur .histoire reçoit .fade-visible, animer l'image aussi */
+.histoire.fade-visible .histoire-img img {
+    animation: k-zoom-in 1.1s cubic-bezier(.22,.9,.31,1) both;
+}
+
+/* Activités : slide depuis la gauche */
+.activite.fade-visible {
+    animation: k-slide-left 1.0s cubic-bezier(.22,.9,.31,1) both;
+}
+
+/* Si le conteneur .activites-grid reçoit .fade-visible, animer ses enfants */
+.activites-grid.fade-visible .activite {
+    animation: k-slide-left 1.0s cubic-bezier(.22,.9,.31,1) both;
+}
+
+/* Valeurs : léger bounce */
+.valeur-badge.fade-visible {
+    animation: k-fade-bounce 1.0s cubic-bezier(.2,1.1,.2,1) both;
+}
+
+/* Si le conteneur .valeurs reçoit .fade-visible, animer ses badges */
+.valeurs.fade-visible .valeur-badge {
+    animation: k-fade-bounce 1.0s cubic-bezier(.2,1.1,.2,1) both;
+}
+
+/* Contact : simple fade */
+.about-cta.fade-visible,
+.about-cta .fade-visible {
+    animation: k-fade 0.9s ease both;
+}
+
+/* Restauration des effets de survol (déclarés après les animations pour conserver la cascade) */
+.mission-card {
+    position: relative;
+    top: 0;
+    transition: top 0.28s ease, box-shadow 0.28s ease;
+}
+.mission-card.fade-visible:hover {
+    top: -6px;
+    box-shadow: 0 18px 40px rgba(20,28,60,0.10);
+}
+
+.activite {
+    position: relative;
+    top: 0;
+    transition: top 0.24s ease, box-shadow 0.24s ease;
+}
+.activite.fade-visible:hover {
+    top: -4px;
+    box-shadow: 0 8px 25px rgba(20,28,60,0.10);
+}
+
+/* Image d'histoire : si l'image ou le conteneur est visible, conserver le hover scale */
+.histoire .histoire-img img {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.histoire-img.fade-visible img:hover,
+.histoire.fade-visible .histoire-img img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(75, 92, 240, 0.35);
+}
+
+.valeur-badge,
+.valeur-badge.fade-visible {
+    transition: transform 0.26s ease, background 0.26s ease;
+}
+.valeur-badge.fade-visible:hover {
+    transform: translateY(-3px);
+    background: var(--ksc-accent);
+}
+
+/* Augmenter la spécificité + assurer pointer-events pour logo et badges */
+.histoire .histoire-img.fade-visible img,
+.histoire-img.fade-visible img,
+.histoire.fade-visible .histoire-img img {
+    cursor: pointer;
+    pointer-events: auto;
+}
+.histoire .histoire-img.fade-visible img:hover,
+.histoire.fade-visible .histoire-img.fade-visible img:hover,
+.histoire-img.fade-visible img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(75,92,240,0.35);
+}
+
+.valeurs .valeur-badge,
+.valeurs.fade-visible .valeur-badge,
+.valeur-badge.fade-visible {
+    cursor: pointer;
+    pointer-events: auto;
+}
+.valeurs .valeur-badge.fade-visible:hover,
+.valeurs.fade-visible .valeur-badge:hover,
+.valeur-badge.fade-visible:hover {
+    transform: translateY(-3px);
+    background: var(--ksc-accent);
+}
+
+.cta-btn.fade-visible:hover,
+.about-cta.fade-visible .cta-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* Stagger par défaut : utiliser les delays uniquement sur les éléments enfants
+     pour éviter d'ajouter inline styles. Ces sélecteurs sont sûrs tant que
+     l'ordre DOM des éléments est respecté. */
+.missions-grid .mission-card:nth-child(1) { animation-delay: 0.25s; }
+.missions-grid .mission-card:nth-child(2) { animation-delay: 0.50s; }
+.missions-grid .mission-card:nth-child(3) { animation-delay: 0.75s; }
+.activites-grid .activite:nth-child(1) { animation-delay: 0.20s; }
+.activites-grid .activite:nth-child(2) { animation-delay: 0.40s; }
+.activites-grid .activite:nth-child(3) { animation-delay: 0.60s; }
+.activites-grid .activite:nth-child(4) { animation-delay: 0.80s; }
+.valeurs .valeur-badge:nth-child(1) { animation-delay: 0.18s; }
+.valeurs .valeur-badge:nth-child(2) { animation-delay: 0.34s; }
+.valeurs .valeur-badge:nth-child(3) { animation-delay: 0.50s; }
+.valeurs .valeur-badge:nth-child(4) { animation-delay: 0.66s; }
+.valeurs .valeur-badge:nth-child(5) { animation-delay: 0.82s; }
+/* Responsive */
+@media (max-width:1000px) {
+    .histoire {
+        grid-template-columns: 1fr 300px;
+    }
+    .missions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .activites-grid {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width:720px) {
+    .missions-grid {
+        grid-template-columns: 1fr;
+    }
+    .histoire {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .histoire .histoire-img {
+        order: -1;
+    }
+    .about-hero h1 {
+        font-size: 1.4rem;
+    }
+    .section-inner {
+        padding: 0 12px;
+    }
+}
+/* Header */
+.ksc-header {
+    background: transparent;
+    padding: 14px 0 6px;
+}
+.ksc-header-inner {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    justify-content: center;
+}
+.ksc-home-link {
+    position: absolute;
+    left: 18px;
+    top: 18px;
+    color: var(--ksc-muted);
+    text-decoration: none;
+}
+.ksc-page-title {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--ksc-primary);
+    text-align: center;
+}
+.site-footer {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  color: #555; /* couleur de texte sobre */
+}
+.container{ max-width:1200px; margin:0 auto; }
+
+
+/* Anciennes définitions supprimées : animations centralisées plus haut */
